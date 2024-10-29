@@ -1,7 +1,10 @@
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 export default function InvoiceStatus({ status }: { status: string }) {
+  const t = useTranslations('Invoices');
+  
   return (
     <span
       className={clsx(
@@ -14,13 +17,13 @@ export default function InvoiceStatus({ status }: { status: string }) {
     >
       {status === 'pending' ? (
         <>
-          Pending
+          {t('pending')}
           <ClockIcon className="ml-1 w-4 text-gray-500" />
         </>
       ) : null}
       {status === 'paid' ? (
         <>
-          Paid
+          {t('paid')}
           <CheckIcon className="ml-1 w-4 text-white" />
         </>
       ) : null}

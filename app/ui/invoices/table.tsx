@@ -3,6 +3,7 @@ import { UpdateInvoice, DeleteInvoice } from '@/app/ui/invoices/buttons';
 import InvoiceStatus from '@/app/ui/invoices/status';
 import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
 import { fetchFilteredInvoices } from '@/app/lib/data';
+import { getTranslations } from 'next-intl/server';
 
 export default async function InvoicesTable({
   query,
@@ -11,6 +12,7 @@ export default async function InvoicesTable({
   query: string;
   currentPage: number;
 }) {
+  const t = await getTranslations('Invoices');
   const invoices = await fetchFilteredInvoices(query, currentPage);
 
   return (
@@ -58,22 +60,22 @@ export default async function InvoicesTable({
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>
                 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-                  Customer
+                  {t('customer')}
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Email
+                  {t('email')}
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Amount
+                  {t('amount')}
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Date
+                  {t('date')}
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Status
+                  {t('status')}
                 </th>
                 <th scope="col" className="relative py-3 pl-6 pr-3">
-                  <span className="sr-only">Edit</span>
+                  <span className="sr-only">{t('edit')}</span>
                 </th>
               </tr>
             </thead>

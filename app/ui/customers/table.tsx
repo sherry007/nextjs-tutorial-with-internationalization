@@ -1,22 +1,26 @@
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
+import { fetchFilteredCustomers } from '@/app/lib/data';
 import Search from '@/app/ui/search';
 import {
   CustomersTableType,
   FormattedCustomersTable,
 } from '@/app/lib/definitions';
+import { getTranslations } from 'next-intl/server';
 
 export default async function CustomersTable({
-  customers,
+  query,
 }: {
-  customers: FormattedCustomersTable[];
+  query: string;
 }) {
+  const customers = await fetchFilteredCustomers(query);
+  const t = await getTranslations('Customers');
   return (
     <div className="w-full">
       <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
-        Customers
+        {t('title')}
       </h1>
-      <Search placeholder="Search customers..." />
+      <Search placeholder={t('search')} />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
@@ -48,16 +52,16 @@ export default async function CustomersTable({
                     </div>
                     <div className="flex w-full items-center justify-between border-b py-5">
                       <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Pending</p>
+                        <p className="text-xs">{t('pending')}</p>
                         <p className="font-medium">{customer.total_pending}</p>
                       </div>
                       <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Paid</p>
+                        <p className="text-xs">{t('paid')}</p>
                         <p className="font-medium">{customer.total_paid}</p>
                       </div>
                     </div>
                     <div className="pt-4 text-sm">
-                      <p>{customer.total_invoices} invoices</p>
+                      <p>{customer.total_invoices} {t('invoices')}</p>
                     </div>
                   </div>
                 ))}
@@ -66,19 +70,19 @@ export default async function CustomersTable({
                 <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
                   <tr>
                     <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-                      Name
+                      {t('name')}
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
-                      Email
+                      {t('email')}
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
-                      Total Invoices
+                      {t('totalInvoices')}
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
-                      Total Pending
+                      {t('totalPending')}
                     </th>
                     <th scope="col" className="px-4 py-5 font-medium">
-                      Total Paid
+                      {t('totalPaid')}
                     </th>
                   </tr>
                 </thead>

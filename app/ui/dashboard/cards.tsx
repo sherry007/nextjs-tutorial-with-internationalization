@@ -4,7 +4,9 @@ import {
   UserGroupIcon,
   InboxIcon,
 } from '@heroicons/react/24/outline';
+import { fetchCardData } from '@/app/lib/data';
 import { lusitana } from '@/app/ui/fonts';
+import { getTranslations } from 'next-intl/server';
 
 const iconMap = {
   collected: BanknotesIcon,
@@ -14,18 +16,23 @@ const iconMap = {
 };
 
 export default async function CardWrapper() {
+  const t = await getTranslations('Dashboard');
+  const {
+    totalPaidInvoices,
+    totalPendingInvoices,
+    numberOfInvoices,
+    numberOfCustomers
+  } = await fetchCardData();
   return (
     <>
-      {/* NOTE: Uncomment this code in Chapter 9 */}
-
-      {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
-      <Card title="Pending" value={totalPendingInvoices} type="pending" />
-      <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
+      <Card title={t('collected')} value={totalPaidInvoices} type="collected" />
+      <Card title={t('pending')} value={totalPendingInvoices} type="pending" />
+      <Card title={t('totalInvoices')} value={numberOfInvoices} type="invoices" />
       <Card
-        title="Total Customers"
+        title={t('totalCustomers')}
         value={numberOfCustomers}
         type="customers"
-      /> */}
+      />
     </>
   );
 }

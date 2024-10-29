@@ -1,0 +1,65 @@
+{
+  "Index": {
+    "welcome": "欢迎使用 Acme。",
+    "descriptionPrev": "这是 Next.js 课程的示例",
+    "courseLink": "Next.js Learn 课程",
+    "descriptionNext": "，由 Vercel 出品。"
+  },
+  "Login": {
+    "title": "登录",
+    "email": "邮箱",
+    "emailPlaceholder": "输入邮箱地址",
+    "password": "密码",
+    "passwordPlaceholder": "输入密码",
+    "login": "登录"
+  },
+  "Home": {
+    "title": "主页",
+    "invoices": "发票",
+    "customers": "客户",
+    "signout": "登出"
+  },
+  "Dashboard": {
+    "title": "仪表盘",
+    "recentRevenue": "最近收入",
+    "collected": "已收款",
+    "pending": "未收款",
+    "totalInvoices": "总发票",
+    "totalCustomers": "总客户",
+    "latestInvoices": "最新发票",
+    "last12Months": "最近12个月",
+    "updatedJustNow": "刚刚更新"
+  },
+  "Invoices": {
+    "title": "发票",
+    "search": "搜索发票...",
+    "createInvoice": "创建发票",
+    "editInvoice": "编辑发票",
+    "customer": "客户",
+    "email": "邮箱",
+    "amount": "金额",
+    "date": "日期",
+    "status": "状态",
+    "edit": "编辑",
+    "chooseCustomer": "选择客户",
+    "selectCustomer": "选择客户",
+    "chooseAmount": "选择金额",
+    "enterUSDAmount": "输入美元金额",
+    "setInvoiceStatus": "设置发票状态",
+    "pending": "未付款",
+    "paid": "已付款",
+    "cancel": "取消"
+  },
+  "Customers": {
+    "title": "客户",
+    "search": "搜索客户...",
+    "name": "姓名",
+    "email": "邮箱",
+    "invoices": "发票",
+    "pending": "未付款",
+    "paid": "已付款",
+    "totalInvoices": "总发票",
+    "totalPending": "总未付款",
+    "totalPaid": "总已付款"
+  }
+}

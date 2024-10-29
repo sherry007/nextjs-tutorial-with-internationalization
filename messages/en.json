@@ -1,0 +1,65 @@
+{
+  "Index": {
+    "welcome": "Welcome to Acme.",
+    "descriptionPrev": "This is the example for the ",
+    "courseLink": "Next.js Learn Course",
+    "descriptionNext": ", brought to you by Vercel."
+  },
+  "Login": {
+    "title": "Login",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email address",
+    "password": "Password",
+    "passwordPlaceholder": "Enter password",
+    "login": "Log in"
+  },
+  "Home": {
+    "title": "Home",
+    "invoices": "Invoices",
+    "customers": "Customers",
+    "signout": "Sign out"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "recentRevenue": "Recent Revenue",
+    "collected": "Collected",
+    "pending": "Pending",
+    "totalInvoices": "Total Invoices",
+    "totalCustomers": "Total Customers",
+    "latestInvoices": "Latest Invoices",
+    "last12Months": "Last 12 months",
+    "updatedJustNow": "Updated just now"
+  },
+  "Invoices": {
+    "title": "Invoices",
+    "search": "Search invoices...",
+    "createInvoice": "Create Invoice",
+    "editInvoice": "Edit Invoice",
+    "customer": "Customer",
+    "email": "Email",
+    "amount": "Amount",
+    "date": "Date",
+    "status": "Status",
+    "edit": "Edit",
+    "chooseCustomer": "Choose customer",
+    "selectCustomer": "Select a customer",
+    "chooseAmount": "Choose an amount",
+    "enterUSDAmount": "Enter USD amount",
+    "setInvoiceStatus": "Set the invoice status",
+    "pending": "Pending",
+    "paid": "Paid",
+    "cancel": "Cancel"
+  },
+  "Customers": {
+    "title": "Customers",
+    "search": "Search customers...",
+    "name": "Name",
+    "email": "Email",
+    "invoices": "Invoices",
+    "pending": "Pending",
+    "paid": "Paid",
+    "totalInvoices": "Total Invoices",
+    "totalPending": "Total Pending",
+    "totalPaid": "Total Paid"
+  }
+}
