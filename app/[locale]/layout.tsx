@@ -14,10 +14,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
 
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'zh' }];
-}
-
 export default async function RootLayout({
   children,
   params: { locale }
