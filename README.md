@@ -8,8 +8,13 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 In this tutorial demo, i've added internalization with [next-intl](https://next-intl-docs.vercel.app/), and config Next middleware with [NextAuth](https://next-auth.js.org/). The locales include English and Chinese.
 
-And this is the [demo](https://nextjs-tutorial-with-internationalization.vercel.app/), below is the screenshot
+And this is the [demo](https://nextjs-tutorial-with-internationalization.vercel.app/), below is the screenshot.
+If you want to login, here are the email and password, same as [Next.js tutorial](https://nextjs.org/learn/dashboard-app/adding-authentication) :
 
-![img](./project.gif "screenshot").
+Email: `user@nextmail.com`
+
+Password: `123456`
+
+![img](./project.gif "screenshot")
 
 
